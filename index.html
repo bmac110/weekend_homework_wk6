@@ -1,12 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Gaming List App</title>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
 <body>
-  <form id="new-item-form"></form>
+  <form id="new-item-form">
+    <div id="form-wrapper">
+      <div class="form-item">
+        <label for="title" class="primary">Title</label>
+        <input type="text" id="title" required/>
+      </div>
+
+      <div>
+        <label for="developer" class="primary">Developer</label>
+        <input type="text" id="developer" required/>
+      </div>
+
+      <div class="form-item">
+        <label for="genre" class="primary">Genre</label>
+        <select id="genre">
+          <option value="" disabled selected></option>
+          <option value="strategy">Strategy</option>
+          <option value="shooter">Shooter</option>
+          <option value="platformer">Platformer</option>
+          <option value="puzzle">Puzzle</option>
+        </select>
+      </div>
+    </div>
+    <input type="submit" value="save"/>
+  </form>
+
+  <h1>Gaming List</h1>
+  <div id="gaming-list">
+  </div>
+  <div>
+    <input id="delete-all" type="submit" value="Delete All">
+  </div>
+
 </body>
 </html>
