@@ -18,8 +18,8 @@ const addNewGame = function(event){
   event.preventDefault();
   console.log(this);
   const title = "Title: " + this.title.value;
-  const developer = this.developer.value;
-  const genre = this.genre.value;
+  const developer = "Developer: " + this.developer.value;
+  const genre = "Genre: " + this.genre.value;
 
   const gamingList = document.querySelector("#gaming-list");
 
@@ -29,12 +29,13 @@ const addNewGame = function(event){
 
 
   const gameEntry = document.createElement("div")
+  gameEntry.classList.add("gaming-list-item");
   gameEntry.textContent = ""
   gameEntry.appendChild(titleEntry);
   gameEntry.appendChild(developerEntry);
   gameEntry.appendChild(genreEntry);
   gamingList.appendChild(gameEntry);
-  // gameEntry.classList.add("entry");
+
 
   event.target.reset()
 }

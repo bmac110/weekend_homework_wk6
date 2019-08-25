@@ -1,7 +1,83 @@
+/* #save {
+  display: flex;
+  flex-direction: row;
+
+  margin: 0rem 14rem;
+  padding: 0rem 2rem;
+
+} */
+
+body {
+  background-color: rgba(31, 47, 102, 0.9);
+  border: yellow;
+}
+
+.form-item {
+
+  margin: 0rem 5rem;
+  display: inline-block;
+}
+
+#form-wrapper {
+
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border: 3px solid yellow;
+  background: rgba(31, 47, 102, 0.9);
+  color: white;
+  box-shadow: 0 0 0 10px hsl(0, 0%, 80%);
+  outline: 5px solid black;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  font-kerning: auto;
+  font-family: "futura";
+  /* flex: 1 100%; */
+}
+
 h1 {
   font-family: "impact";
+  color: white;
 }
 
 #gaming-list {
+  display: flex;
+  flex-wrap: wrap;
   font-family: "futura";
+}
+
+.gaming-list-item {
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border: 4px solid yellow;
+  background: rgba(31, 47, 102, 0.9);
+  color: white;
+  box-shadow: 0 0 0 10px hsl(0, 0%, 80%);
+  outline: 5px solid black;
+}
+
+button, input[type="submit"] {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1em;
+  margin-top: 1rem;
+  color: black;
+  background-color: white;
+  border: 3px;
+  border-style: groove;
+  font-family: "futura";
+  right: 2em;
+
+}
+
+button, input[type="submit"]:hover {
+  font-size: 1em;
+  margin-top: 1rem;
+  color: black;
+  background-color: yellow;
+  border: 3px;
+  border-style: groove;
+  font-family: "futura";
+
 }
