@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.querySelector("#new-item-form");
   form.addEventListener("submit", addNewGame);
+
+  const deleteAll = document.querySelector("#delete-all");
+  deleteAll.addEventListener("click", handleDeleteAll);
 })
 
 const addEntryElement = function(text, element){
@@ -14,7 +17,7 @@ const addEntryElement = function(text, element){
 const addNewGame = function(event){
   event.preventDefault();
   console.log(this);
-  const title = this.title.value;
+  const title = "Title: " + this.title.value;
   const developer = this.developer.value;
   const genre = this.genre.value;
 
@@ -31,5 +34,12 @@ const addNewGame = function(event){
   gameEntry.appendChild(developerEntry);
   gameEntry.appendChild(genreEntry);
   gamingList.appendChild(gameEntry);
-  gameEntry.classList.add("entry");
+  // gameEntry.classList.add("entry");
+
+  event.target.reset()
+}
+
+const handleDeleteAll = function(event){
+  const gamingList = document.querySelector("#gaming-list");
+  gamingList.innerHTML = "";
 }
